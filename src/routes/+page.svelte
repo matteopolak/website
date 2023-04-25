@@ -1,10 +1,5 @@
 <div class="hero min-h-screen bg-base-200">
 	<div class="hero-content flex-col lg:flex-row-reverse">
-		<img
-			src="/images/hero.jpg"
-			class="lg:block hidden max-w-xs rounded-lg shadow-2xl"
-			alt="Matthew Polak"
-		/>
 		<div>
 			<h1 class="text-5xl font-bold">Hey, I'm Matthew</h1>
 			<p class="py-6">
