@@ -17,7 +17,7 @@
 >
 	<div
 		data-theme={theme}
-		class="bg-base-100 text-base-content w-full cursor-pointer font-sans"
+		class="bg-base-100 text-base-content w-full cursor-pointer"
 	>
 		<div class="grid grid-cols-5 grid-rows-3">
 			<div

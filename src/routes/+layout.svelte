@@ -4,7 +4,7 @@
 	import Theme from '$/components/theme/Theme.svelte';
 	import { page } from '$app/stores';
 
-	import '../app.postcss';
+	import '../app.css';
 </script>
 
 {#if $page.url.pathname !== '/'}

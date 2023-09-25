@@ -1,14 +1,52 @@
+<script>
+	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+
+	let ready = false;
+
+	onMount(() => {
+		ready = true;
+	});
+</script>
+
 <div class="hero min-h-screen bg-base-200">
 	<div class="hero-content flex-col lg:flex-row-reverse">
 		<div>
-			<h1 class="text-5xl font-bold">Hey, I'm Matthew</h1>
+			<h1 class="text-6xl">
+				<span>Hey,</span>
+
+				{#if ready}
+					{#each "I'm" as c, i}
+						<span
+							transition:fly={{
+								delay: i * 40,
+								duration: 5_000,
+								opacity: 0,
+							}}>{c}</span
+						>
+					{/each}
+
+					<span class="font-extrabold">
+						{#each 'Matthew' as c, i}
+							<span
+								transition:fly={{
+									delay: i * 40 + 4 * 40,
+									duration: 5_000,
+									opacity: 0,
+								}}>{c}</span
+							>
+						{/each}
+					</span>
+				{/if}
+			</h1>
 			<p class="py-6">
-				I'm a first-year Computer Science student at the University of Ottawa.
+				I'm a second-year Computer Science student at the University of Ottawa.
 			</p>
 
-			<div class="btn-group">
+			<div class="flex flex-row flex-wrap gap-1">
 				<a class="btn btn-github" href="https://github.com/matteopolak">
-					<svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+					<svg viewBox="0 0 16 16" class="fill-current w-5 h-5">
 						<title>GitHub logo</title>
 						<path
 							fill-rule="evenodd"
@@ -19,13 +57,7 @@
 					GitHub
 				</a>
 				<a class="btn btn-linkedin" href="https://linkedin.com/in/matteo-polak">
-					<svg
-						width="20"
-						height="20"
-						viewBox="0 -20480 20480 20480"
-						preserveAspectRatio="xMidYMid meet"
-						fill="currentColor"
-					>
+					<svg viewBox="0 -20480 20480 20480" class="fill-current w-5 h-5">
 						<title>LinkedIn logo</title>
 						<path
 							transform="scale(1, -1)"

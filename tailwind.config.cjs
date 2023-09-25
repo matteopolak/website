@@ -12,7 +12,7 @@ const config = {
 		themes: [
 			{
 				black: {
-					...require('daisyui/src/colors/themes')['[data-theme=black]'],
+					...require('daisyui/src/theming/themes')['[data-theme=black]'],
 					'.btn-github': {
 						background: '#171515',
 						border: 'none',
@@ -33,7 +33,7 @@ const config = {
 			},
 			{
 				synthwave: {
-					...require('daisyui/src/colors/themes')['[data-theme=synthwave]'],
+					...require('daisyui/src/theming/themes')['[data-theme=synthwave]'],
 					'.btn-github': {
 						background: '#4f4f4b',
 						border: 'none',
@@ -54,7 +54,7 @@ const config = {
 			},
 			{
 				lofi: {
-					...require('daisyui/src/colors/themes')['[data-theme=lofi]'],
+					...require('daisyui/src/theming/themes')['[data-theme=lofi]'],
 					'.btn-github': {
 						background: '#4f4f4b',
 						border: 'none',
@@ -75,7 +75,7 @@ const config = {
 			},
 			{
 				pastel: {
-					...require('daisyui/src/colors/themes')['[data-theme=pastel]'],
+					...require('daisyui/src/theming/themes')['[data-theme=pastel]'],
 					'.btn-github': {
 						background: '#4f4f4b',
 						border: 'none',
@@ -96,7 +96,7 @@ const config = {
 			},
 			{
 				light: {
-					...require('daisyui/src/colors/themes')['[data-theme=light]'],
+					...require('daisyui/src/theming/themes')['[data-theme=light]'],
 					primary: '#9f1239',
 					'.btn-github': {
 						background: '#171515',
@@ -118,7 +118,7 @@ const config = {
 			},
 			{
 				dark: {
-					...require('daisyui/src/colors/themes')['[data-theme=dark]'],
+					...require('daisyui/src/theming/themes')['[data-theme=dark]'],
 					primary: '#be123c',
 					'.btn-github': {
 						background: '#171515',

@@ -8,14 +8,44 @@
 		description: string;
 		repository: string;
 		tags: string[];
+		website?: string;
 	};
 
 	const projects: Project[] = [
 		{
+			title: 'Noteboard',
+			thumbnail: '/images/projects/noteboard.webp',
+			date: 'Sept 24, 2023',
+			description:
+				'Noteboard is a music-based collaborative drawing tool. It allows anyone to create and share their own music creations in real-time with anyone around the world.',
+			repository: 'https://github.com/matteopolak/noteboard',
+			website: 'https://noteboard.matteopolak.com',
+			tags: ['Svelte', 'TypeScript'],
+		},
+		{
+			title: 'StatPixel',
+			thumbnail: '/images/projects/statpixel.webp',
+			date: 'August 20, 2023',
+			description:
+				'StatPixel is a Discord bot that gives users access to huge amounts of data about Hypixel player performance, history, statistics, and much more, all in Discord.',
+			repository: 'https://github.com/statpixel-rs/statpixel',
+			website: 'https://statpixel.xyz',
+			tags: [
+				'Rust',
+				'Skia',
+				'PostgreSQL',
+				'Discord',
+				'Redis',
+				'Axum',
+				'Svelte',
+				'TypeScript',
+			],
+		},
+		{
 			title: 'Personal Website v2',
 			thumbnail: '/images/projects/personal-website-v2.webp',
 			date: 'Jan 28, 2023',
-			description: `This is the second iteration of my personal website. It is built using SvelteKit and Preline and it's hosted on Cloudflare Pages.`,
+			description: `This is the second iteration of my personal website. It is built using SvelteKit and DaisyUI and it's hosted on Cloudflare Pages.`,
 			repository: 'https://github.com/matteopolak/website',
 			tags: ['Svelte', 'TypeScript'],
 		},
@@ -125,7 +155,7 @@
 	<div class="grid lg:grid-cols-2 gap-6">
 		{#each projects as project}
 			<ProjectCard
-				href={project.repository}
+				href={project.website ?? project.repository}
 				thumbnail={project.thumbnail}
 				description={project.description}
 				title={project.title}

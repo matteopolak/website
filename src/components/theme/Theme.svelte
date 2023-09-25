@@ -2,8 +2,8 @@
 	import ThemeItem from './ThemeItem.svelte';
 </script>
 
-<div title="Change Theme" class="dropdown dropdown-end ">
-	<div tabindex="0" class="btn gap-1 normal-case btn-ghost">
+<div title="Change Theme" class="dropdown dropdown-end">
+	<div tabindex="-1" class="btn gap-1 normal-case btn-ghost">
 		<svg
 			width="20"
 			height="20"
@@ -32,7 +32,7 @@
 	<div
 		class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px w-52 overflow-y-auto shadow-2xl mt-16"
 	>
-		<div class="grid grid-cols-1 gap-3 p-3" tabindex="0">
+		<div class="grid grid-cols-1 gap-3 p-3" tabindex="-1">
 			<ThemeItem theme="light" name="Light" />
 			<ThemeItem theme="dark" name="Dark" />
 			<ThemeItem theme="black" name="Black" />

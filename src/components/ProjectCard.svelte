@@ -7,15 +7,16 @@
 
 <a class="group block" {href}>
 	<div
-		class="card relative bg-base-100 shadow-xl image-full before:w-full before:h-full h-[350px]"
+		class="card w-full h-full bg-base-100 shadow-xl image-full max-h-96 hover:shadow-2xl hover:scale-105 transition-all duration-300"
 	>
 		<figure>
 			<img src={thumbnail} alt={title} class="w-full h-full object-cover" />
 		</figure>
-		<div class="card-body flex justify-between">
+		<div class="card-body">
 			<h2 class="card-title">{title}</h2>
-			<div class="flex flex-col gap-3">
-				<span class="flex flex-row gap-2">
+			<p>If a dog chews shoes whose shoes does he choose?</p>
+			<div class="card-actions justify-start">
+				<span class="flex flex-row flex-wrap gap-2">
 					<slot name="tags" />
 				</span>
 				<div class="line-clamp-3">

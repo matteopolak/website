@@ -34,7 +34,7 @@
 			frameworks, and APIs.
 		</p>
 
-		<div class="btn-group">
+		<div class="flex flex-row flex-wrap gap-1">
 			<a class="btn btn-linkedin" href="https://linkedin.com/in/matteo-polak">
 				<svg
 					width="20"
