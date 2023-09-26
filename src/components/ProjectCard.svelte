@@ -14,6 +14,7 @@
 		</figure>
 		<div class="card-body">
 			<h2 class="card-title">{title}</h2>
+			<p />
 			<div class="card-actions justify-start">
 				<span class="flex flex-row flex-wrap gap-2">
 					<slot name="tags" />
