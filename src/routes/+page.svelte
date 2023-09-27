@@ -19,7 +19,7 @@
 				{#if ready}
 					{#each "I'm" as c, i}
 						<span
-							transition:fly={{
+							in:fly={{
 								delay: i * 40,
 								duration: 5_000,
 								opacity: 0,
@@ -30,7 +30,7 @@
 					<span class="font-extrabold">
 						{#each 'Matthew' as c, i}
 							<span
-								transition:fly={{
+								in:fly={{
 									delay: i * 40 + 4 * 40,
 									duration: 5_000,
 									opacity: 0,

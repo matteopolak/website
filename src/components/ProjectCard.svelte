@@ -10,7 +10,12 @@
 		class="card w-full h-full bg-base-100 shadow-xl image-full max-h-96 hover:shadow-2xl hover:scale-105 transition-all duration-300"
 	>
 		<figure>
-			<img src={thumbnail} alt={title} class="w-full h-full object-cover" />
+			<img
+				src={thumbnail}
+				alt={title}
+				class="w-full h-full object-cover"
+				loading="lazy"
+			/>
 		</figure>
 		<div class="card-body">
 			<h2 class="card-title">{title}</h2>
