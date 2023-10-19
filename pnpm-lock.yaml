@@ -55,6 +55,9 @@ devDependencies:
   svelte-preprocess:
     specifier: ^4.10.7
     version: 4.10.7(postcss-load-config@4.0.1)(postcss@8.4.30)(svelte@3.59.2)(typescript@4.9.5)
+  svelte-reveal:
+    specifier: ^0.7.0
+    version: 0.7.0
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3
@@ -1921,6 +1924,10 @@ packages:
       strip-indent: 3.0.0
       svelte: 3.59.2
       typescript: 5.2.2
+    dev: true
+
+  /svelte-reveal@0.7.0:
+    resolution: {integrity: sha512-cmdYWpULQXtbEuzxxObR2IRbyKef51KlqidkLswj1F3FzeoYr9WHvL2setvvkH3MpD0BfFngvWWAXNPj/PDXXA==}
     dev: true
 
   /svelte@3.59.2:

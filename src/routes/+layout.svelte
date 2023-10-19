@@ -10,7 +10,7 @@
 {#if $page.url.pathname !== '/'}
 	<Navbar />
 {:else}
-	<div class="absolute right-2 top-2">
+	<div class="absolute right-2 top-2 z-50">
 		<Theme />
 	</div>
 {/if}

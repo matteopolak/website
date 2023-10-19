@@ -1,3 +1,5 @@
+import type { RevealOptions } from 'svelte-reveal';
+
 export function expandWidthOnScroll(node: HTMLElement) {
 	const height = node.offsetHeight * 2;
 
@@ -20,5 +22,14 @@ export function expandWidthOnScroll(node: HTMLElement) {
 			window.removeEventListener('scroll', update);
 			window.removeEventListener('resize', update);
 		},
+	};
+}
+
+export function animate(delay: number, direction: 'x' | 'y' = 'x'): RevealOptions {
+	return {
+		transition: 'fly',
+		delay,
+		duration: 300,
+		[direction]: 30,
 	};
 }
