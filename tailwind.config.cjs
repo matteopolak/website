@@ -1,3 +1,5 @@
+const colours = require('tailwindcss/colors');
+
 const config = {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	theme: {
@@ -119,14 +121,14 @@ const config = {
 			{
 				dark: {
 					...require('daisyui/src/theming/themes')['[data-theme=dark]'],
-					primary: '#be123c',
+					primary: colours.teal[500],
 					'.btn-github': {
-						background: '#171515',
+						background: '#ccc',
 						border: 'none',
-						color: '#fff',
+						color: '#171515',
 					},
 					'.btn-github:hover': {
-						background: '#000',
+						background: '#aaa',
 					},
 					'.btn-linkedin': {
 						color: '#fff',

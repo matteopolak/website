@@ -1,4 +1,5 @@
-/* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Gabarito:wght@400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,9 +11,11 @@
 }
 
 @layer base {
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+	:root {
+		font-family: 'Gabarito', sans-serif;
+	}
 
 	html {
-		font-family: 'Roboto', sans-serif;
+		scroll-snap-type: y mandatory;
 	}
 }

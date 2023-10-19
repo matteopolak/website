@@ -17,4 +17,6 @@
 
 <slot />
 
-<Footer />
+{#if $page.url.pathname !== '/'}
+	<Footer />
+{/if}
