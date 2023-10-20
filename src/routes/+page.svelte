@@ -244,7 +244,7 @@
 			fill: none;
 		}
 
-		80% {
+		60% {
 			@apply fill-base-200;
 			stroke-dashoffset: 0;
 		}
