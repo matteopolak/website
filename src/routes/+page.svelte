@@ -151,26 +151,32 @@
 					{project.description}
 				</span>
 			</div>
-			<div class="grid justify-left h-full lg:py-16" use:reveal={animate(700)}>
+			<div
+				class="flex flex-col lg:flex-row justify-start h-full lg:py-16"
+				use:reveal={animate(300)}
+			>
 				<a
 					href={project.website ?? project.repository}
 					class="hover:scale-105 transition-all duration-300"
 				>
 					<img
-						class="object-cover rounded-3xl overflow-hidden max-w-md max-h-96 lg:max-h-full min-h-full shadow-static"
+						class="object-cover rounded-3xl overflow-hidden lg:max-w-md max-h-96 lg:max-h-full lg:min-h-full shadow-static"
 						alt={project.title}
 						src={project.thumbnail}
 					/>
 				</a>
 			</div>
 		{:else}
-			<div class="grid justify-end h-full lg:py-16" use:reveal={animate(300)}>
+			<div
+				class="flex flex-col lg:flex-row justify-end h-full lg:py-16"
+				use:reveal={animate(300)}
+			>
 				<a
 					href={project.website ?? project.repository}
 					class="hover:scale-105 transition-all duration-300"
 				>
 					<img
-						class="object-cover rounded-3xl overflow-hidden max-w-md max-h-96 lg:max-h-full min-h-full shadow-static"
+						class="object-cover rounded-3xl overflow-hidden lg:max-w-md max-h-96 lg:max-h-full lg:min-h-full shadow-static"
 						alt={project.title}
 						src={project.thumbnail}
 					/>
