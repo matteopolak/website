@@ -4,6 +4,7 @@
 	import { reveal } from 'svelte-reveal';
 	import { animate } from '$/lib/animate';
 	import { projects } from '$/lib/projects';
+	import Quasi from '$/components/Quasi.svelte';
 
 	onMount(() => {
 		ready = true;
@@ -122,7 +123,7 @@
 
 {#each projects as project, i}
 	<section
-		class="bg-base-200 flex flex-col lg:flex-row justify-center place-items-center gap-24 w-full h-full p-8"
+		class="bg-base-200 flex flex-col lg:flex-row justify-center place-items-center gap-12 md:gap-24 w-full h-full p-8"
 		id="about"
 	>
 		{#if i % 2}
@@ -150,6 +151,12 @@
 				>
 					{project.description}
 				</span>
+
+				{#if project.title === 'Quasi'}
+					<span use:reveal={animate(500)} class="w-full">
+						<Quasi />
+					</span>
+				{/if}
 			</div>
 			<div
 				class="flex flex-col lg:flex-row justify-start h-full lg:py-16"
@@ -206,6 +213,12 @@
 				>
 					{project.description}
 				</span>
+
+				{#if project.title === 'Quasi'}
+					<span use:reveal={animate(500)} class="w-full">
+						<Quasi />
+					</span>
+				{/if}
 			</div>
 		{/if}
 	</section>
