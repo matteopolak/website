@@ -6,7 +6,7 @@
 	import Project from '$/components/Project.svelte';
 </script>
 
-<IntroAnimation id="intro-animation" />
+<IntroAnimation />
 
 <HorizontalScroll id="projects">
 	{#each projects as project}

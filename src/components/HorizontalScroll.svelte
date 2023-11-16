@@ -17,7 +17,7 @@
 			scrollTrigger: {
 				trigger: container,
 				pin: true,
-				scrub: 0.3,
+				scrub: 0.6,
 				snap: 1 / (container.children.length - 1),
 				end: () => `+=${container.offsetWidth}`,
 			},

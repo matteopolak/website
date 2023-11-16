@@ -62,6 +62,7 @@
 				<a
 					class="btn btn-sm md:btn-md lg:btn-lg btn-secondary"
 					href={project.website}
+					use:reveal={animate(300)}
 				>
 					<Monitor />
 					View website
@@ -71,6 +72,7 @@
 			<a
 				class="btn btn-sm md:btn-md lg:btn-lg btn-primary"
 				href={project.repository}
+				use:reveal={animate(200)}
 			>
 				<GitHub />
 				Learn more

@@ -5,8 +5,27 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'praise': ['Praise', 'sans-serif'],
+				praise: ['Praise', 'sans-serif'],
 			},
+			animation: {
+				blob: 'blob 7s infinite',
+			},
+			keyframes: {
+				blob: {
+					'0%': {
+						transform: 'translate(0px, 0px) scale(1)',
+					},
+					'33%': {
+						transform: 'translate(30px, -50px) scale(1.1)',
+					},
+					'66%': {
+						transform: 'translate(-20px, 20px) scale(0.9)',
+					},
+					'100%': {
+						transform: 'tranlate(0px, 0px) scale(1)',
+					},
+				},
+			}
 		},
 	},
 	plugins: [
@@ -109,6 +128,7 @@ const config = {
 					success: '#86efac',
 					warning: '#fef08a',
 					error: '#fca5a5',
+					'secondary-content': '#000',
 					'.btn-github': {
 						background: '#171515',
 						border: 'none',
@@ -137,6 +157,7 @@ const config = {
 					success: '#86efac',
 					warning: '#fef08a',
 					error: '#fca5a5',
+					'secondary-content': '#000',
 					'.btn-github': {
 						background: '#ccc',
 						border: 'none',
