@@ -6,6 +6,7 @@ const config = {
 		extend: {
 			fontFamily: {
 				praise: ['Praise', 'sans-serif'],
+				'into-light': ['Shadows Into Light', 'sans-serif'],
 			},
 			animation: {
 				blob: 'blob 7s infinite',

@@ -15,7 +15,10 @@
 				"*"
 			]
 		},
-		"ignoreDeprecations": "5.0"
+		"ignoreDeprecations": "5.0",
+		"types": [
+			"unplugin-icons/types/svelte",
+		]
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

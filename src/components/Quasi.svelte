@@ -1,11 +1,14 @@
 <script lang="ts">
 	import init, { execute } from '$/lib/quasi/wasm';
 
-	let code = 'print "Hello, world!";';
-	let output = 'Hello, world!';
+	const DEFAULT_INPUT = 'print "Hello, world!";';
+	const DEFAULT_OUTPUT = 'Hello, world!';
+
+	let code = DEFAULT_INPUT;
+	let output = DEFAULT_OUTPUT;
 	let error = '';
 
-	$: if (code !== 'print "Hello, world!";') {
+	$: if (code !== DEFAULT_INPUT) {
 		try {
 			output = executeCode(code);
 			error = '';
@@ -13,7 +16,7 @@
 			error = e as string;
 		}
 	} else {
-		output = 'Hello, world!';
+		output = DEFAULT_OUTPUT;
 		error = '';
 	}
 
@@ -38,9 +41,7 @@
 				class="textarea p-4 resize-none font-mono rounded-none bg-base-100 leading-5 max-h-96 overflow-scroll h-fit"
 			/>
 
-			<div
-				class="p-4 font-mono whitespace-pre-wrap leading-5 max-h-48 overflow-scroll"
-			>
+			<div class="p-4 font-mono whitespace-pre-wrap leading-5 overflow-hidden">
 				{#if error}
 					<span class="text-error">{error}</span>
 				{:else}
