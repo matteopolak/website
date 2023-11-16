@@ -37,11 +37,11 @@
 	<div class="flex flex-row flex-wrap gap-2 lg:gap-4">
 		<a
 			href="https://github.com/matteopolak"
-			class="btn btn-neutral btn-sm md:btn-md lg:btn-lg"><GitHub /> GitHub</a
+			class="btn btn-github btn-sm md:btn-md lg:btn-lg"><GitHub /> GitHub</a
 		>
 		<a
 			href="https://linkedin.com/in/matteo-polak"
-			class="btn btn-secondary btn-sm md:btn-md lg:btn-lg"
+			class="btn btn-linkedin btn-sm md:btn-md lg:btn-lg"
 			><LinkedIn /> LinkedIn</a
 		>
 	</div>
