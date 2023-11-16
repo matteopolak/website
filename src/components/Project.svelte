@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { reveal } from 'svelte-reveal';
-	import Arrow from 'virtual:icons/mdi/arrow-forward';
-	import Monitor from 'virtual:icons/mdi/monitor';
-	import GitHub from 'virtual:icons/logos/github-icon';
+	import Arrow from '~icons/mdi/arrow-forward';
+	import Monitor from '~icons/mdi/monitor';
+	import GitHub from '~icons/bxl/github';
 
 	import { animate } from '$/lib/animate';
 	import type { projects } from '$/lib/projects';
 
 	import Quasi from '$/components/Quasi.svelte';
+	import Tag from './Tag.svelte';
 
 	export let project: (typeof projects)[number];
 </script>
@@ -37,10 +38,9 @@
 
 		<div class="flex flex-wrap max-w-md gap-2">
 			{#each project.tags as tag, i}
-				<span
-					class="badge badge-sm md:badge-md lg:badge-lg badge-neutral"
-					use:reveal={animate(300 + 40 * i)}>{tag}</span
-				>
+				<div use:reveal={animate(300 + 40 * i)}>
+					<Tag {tag} />
+				</div>
 			{/each}
 		</div>
 

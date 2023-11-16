@@ -25,9 +25,12 @@ dependencies:
     version: 0.17.4
 
 devDependencies:
-  '@iconify-json/logos':
-    specifier: ^1.1.37
-    version: 1.1.37
+  '@iconify-json/bxl':
+    specifier: ^1.1.7
+    version: 1.1.7
+  '@iconify-json/devicon-plain':
+    specifier: ^1.1.21
+    version: 1.1.21
   '@iconify-json/mdi':
     specifier: ^1.1.55
     version: 1.1.55
@@ -350,8 +353,14 @@ packages:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
 
-  /@iconify-json/logos@1.1.37:
-    resolution: {integrity: sha512-H2S8frTEznk6paX2kMzeUGn4KSiykghvO0b8UvEDd1fFFzt0WxCXpP1tBv67XaWK99e6JgA34hhv4lRGAm1hJg==}
+  /@iconify-json/bxl@1.1.7:
+    resolution: {integrity: sha512-lvhC6+HQ/Fx/H81ekRASgIWVcNt5CRBVyvvhA2BEmdOBlNZmgZA1LdDrhzooZLIR4iRESLpETc0x9cJklGBSzw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/devicon-plain@1.1.21:
+    resolution: {integrity: sha512-CXd+2ReBfj73zt8yMGcHqj/yzpjcaZxTukBAiwlcnBOoacr76XeNyjrMpBN1UkcGgWM6Rn4+V1WgwSf7zyScIQ==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

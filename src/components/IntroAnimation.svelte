@@ -44,7 +44,7 @@
 	{#if ready}
 		<div
 			transition:fly={{
-				delay: 1_100,
+				delay: 1_200,
 				duration: 1_000,
 				x: -40,
 			}}
