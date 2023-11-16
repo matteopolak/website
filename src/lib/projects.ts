@@ -48,21 +48,13 @@ export const projects = [
 		],
 	},
 	{
-		title: 'Personal Website v2',
-		thumbnail: '/images/projects/personal-website-v2.webp',
-		date: 'January 2023',
-		description: `This is the second iteration of my personal website. It is built using SvelteKit and DaisyUI and it's hosted on Cloudflare Pages.`,
-		repository: 'https://github.com/matteopolak/website',
-		tags: ['Svelte', 'TypeScript'],
-	},
-	{
-		title: 'Minecraft Authenticator',
-		thumbnail: '/images/projects/minecraft-authenticator.webp',
-		date: 'January 2023',
+		title: 'Jukebox Music Client',
+		thumbnail: '/images/projects/jukebox-music-client.webp',
+		date: 'June 2022',
 		description:
-			'This npm library allows for password-based authentication for Minecraft: Java Edition. It includes support for proxied authentication, which is useful for authenticating a large number of accounts very quickly.',
-		repository: 'https://github.com/matteopolak/minecraft-auth',
-		tags: ['Node.js', 'TypeScript'],
+			'This project is a Discord bot that allows users to play music in voice channels. It uses a dedicated text channel to accept new tracks, such as playlists, songs, or titles. Users can manage the queue, playback, and even audio effects using various buttons. It supports multiple music streaming platforms, including Spotify, YouTube, Apple Music, SoundCloud, and even Gutenberg (a book repository), reading the books out loud.',
+		repository: 'https://github.com/matteopolak/jukebox',
+		tags: ['Discord', 'FFmpeg', 'Node.js', 'TypeScript'],
 	},
 	{
 		title: 'Minecraft Name Index',
@@ -72,24 +64,6 @@ export const projects = [
 			'This tool periodically scans the top 400,000 English words to check their availability as usernames on Minecraft: Java Edition. The names are ranked based on their frequency in the English language, and they are tagged with various information such as whether they are real names, taken, recently available, or banned. This tool allows players to easily find unique and desirable names for their Minecraft accounts.',
 		repository: 'https://github.com/matteopolak/minecraft',
 		tags: ['Diesel', 'Rust', 'Svelte', 'TypeScript'],
-	},
-	{
-		title: 'Notes App',
-		thumbnail: '/images/projects/geonotes-app.webp',
-		date: 'November 2022',
-		description:
-			'GeoNotes is a mobile application built with Flutter that allows users to easily create and store notes on the cloud. The notes are synced across all devices, so users can view and edit them wherever they are logged in to their account. This app is perfect for those who are always on-the-go and need to jot down quick notes, ideas or reminders that can be accessed from any device.',
-		repository: 'https://github.com/matteopolak/geonotes',
-		tags: ['Dart', 'Firebase', 'Flutter'],
-	},
-	{
-		title: 'Chat Generator AI',
-		thumbnail: '/images/projects/chat-generator-ai.webp',
-		date: 'November 2022',
-		description:
-			'Chat Generator AI is an addition to the "Twitch Chat Downloader" project. It uses TensorFlow and an LSTM model to generate Twitch chat messages from a repository of previous chat messages. With this tool, users can use the "Twitch Chat Downloader" to generate their first dataset and use this AI to generate more chat messages. This project helps users to get more data for testing or even for fun.',
-		repository: 'https://github.com/matteopolak/chat-generator',
-		tags: ['Python', 'TensorFlow'],
 	},
 	{
 		title: 'Twitch Chat Downloader',
@@ -110,6 +84,15 @@ export const projects = [
 		tags: ['Discord', 'Node.js', 'TypeScript'],
 	},
 	{
+		title: 'Chat Generator AI',
+		thumbnail: '/images/projects/chat-generator-ai.webp',
+		date: 'November 2022',
+		description:
+			'Chat Generator AI is an addition to the "Twitch Chat Downloader" project. It uses TensorFlow and an LSTM model to generate Twitch chat messages from a repository of previous chat messages. With this tool, users can use the "Twitch Chat Downloader" to generate their first dataset and use this AI to generate more chat messages. This project helps users to get more data for testing or even for fun.',
+		repository: 'https://github.com/matteopolak/chat-generator',
+		tags: ['Python', 'TensorFlow'],
+	},
+	{
 		title: 'BaerScript',
 		thumbnail: '/images/projects/baerscript-programming-language.webp',
 		date: 'September 2022',
@@ -117,6 +100,15 @@ export const projects = [
 			"This project is an interpreter for an esoteric programming language called BaerScript. An esoteric programming language is a type of programming language that is designed to be difficult to use for practical purposes. BaerScript has a unique feature where it has a buffer that can be modified in each column. However, it is also Turing complete, which means it has the ability to perform any computation, but it's not recommended to use it for any practical purposes.",
 		repository: 'https://github.com/matteopolak/baerscript',
 		tags: ['Rust'],
+	},
+	{
+		title: 'Minecraft Authenticator',
+		thumbnail: '/images/projects/minecraft-authenticator.webp',
+		date: 'January 2023',
+		description:
+			'This npm library allows for password-based authentication for Minecraft: Java Edition. It includes support for proxied authentication, which is useful for authenticating a large number of accounts very quickly.',
+		repository: 'https://github.com/matteopolak/minecraft-auth',
+		tags: ['Node.js', 'TypeScript'],
 	},
 	{
 		title: 'Password Generator',
@@ -127,13 +119,5 @@ export const projects = [
 		repository: 'https://github.com/matteopolak/password',
 		tags: ['Rust'],
 	},
-	{
-		title: 'Jukebox Music Client',
-		thumbnail: '/images/projects/jukebox-music-client.webp',
-		date: 'June 2022',
-		description:
-			'This project is a Discord bot that allows users to play music in voice channels. It uses a dedicated text channel to accept new tracks, such as playlists, songs, or titles. Users can manage the queue, playback, and even audio effects using various buttons. It supports multiple music streaming platforms, including Spotify, YouTube, Apple Music, SoundCloud, and even Gutenberg (a book repository), reading the books out loud.',
-		repository: 'https://github.com/matteopolak/jukebox',
-		tags: ['Discord', 'FFmpeg', 'Node.js', 'TypeScript'],
-	},
+	
 ] satisfies Project[];

@@ -1,22 +1,23 @@
 <script>
 	import Footer from '$/components/Footer.svelte';
-	import Navbar from '$/components/Navbar.svelte';
 	import Theme from '$/components/theme/Theme.svelte';
+
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 	import '../app.css';
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+	});
 </script>
 
-{#if $page.url.pathname !== '/'}
-	<Navbar />
-{:else}
-	<div class="absolute right-2 top-2 z-50">
-		<Theme />
-	</div>
-{/if}
+<div class="absolute right-2 top-2 z-50">
+	<Theme />
+</div>
 
 <slot />
 
-{#if $page.url.pathname !== '/'}
-	<Footer />
-{/if}
+<Footer />
