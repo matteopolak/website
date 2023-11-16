@@ -4,18 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-	.btn {
-		@apply normal-case;
-	}
-}
-
 @layer base {
 	:root {
 		font-family: 'Gabarito', sans-serif;
-	}
-
-	html {
-		scroll-snap-type: y mandatory;
 	}
 }

@@ -1,7 +1,7 @@
 const colours = require('tailwindcss/colors');
 
 const config = {
-	content: ["./src/**/*.{html,js,svelte,ts}"],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -17,7 +17,7 @@ const config = {
 		themes: [
 			{
 				black: {
-					...require('daisyui/src/theming/themes')['[data-theme=black]'],
+					...require('daisyui/src/theming/themes')['black'],
 					'.btn-github': {
 						background: '#171515',
 						border: 'none',
@@ -38,7 +38,7 @@ const config = {
 			},
 			{
 				synthwave: {
-					...require('daisyui/src/theming/themes')['[data-theme=synthwave]'],
+					...require('daisyui/src/theming/themes')['synthwave'],
 					'.btn-github': {
 						background: '#4f4f4b',
 						border: 'none',
@@ -59,7 +59,7 @@ const config = {
 			},
 			{
 				lofi: {
-					...require('daisyui/src/theming/themes')['[data-theme=lofi]'],
+					...require('daisyui/src/theming/themes')['lofi'],
 					'.btn-github': {
 						background: '#4f4f4b',
 						border: 'none',
@@ -80,7 +80,7 @@ const config = {
 			},
 			{
 				pastel: {
-					...require('daisyui/src/theming/themes')['[data-theme=pastel]'],
+					...require('daisyui/src/theming/themes')['pastel'],
 					'.btn-github': {
 						background: '#4f4f4b',
 						border: 'none',
@@ -101,8 +101,14 @@ const config = {
 			},
 			{
 				light: {
-					...require('daisyui/src/theming/themes')['[data-theme=light]'],
-					primary: '#9f1239',
+					...require('daisyui/src/theming/themes')['light'],
+					primary: '#c4b5fd',
+					secondary: '#a5b4fc',
+					accent: '#fb7185',
+					info: '#7dd3fc',
+					success: '#86efac',
+					warning: '#fef08a',
+					error: '#fca5a5',
 					'.btn-github': {
 						background: '#171515',
 						border: 'none',
@@ -123,8 +129,14 @@ const config = {
 			},
 			{
 				dark: {
-					...require('daisyui/src/theming/themes')['[data-theme=dark]'],
-					primary: colours.teal[500],
+					...require('daisyui/src/theming/themes')['dark'],
+					primary: '#c4b5fd',
+					secondary: '#a5b4fc',
+					accent: '#fb7185',
+					info: '#7dd3fc',
+					success: '#86efac',
+					warning: '#fef08a',
+					error: '#fca5a5',
 					'.btn-github': {
 						background: '#ccc',
 						border: 'none',
