@@ -25,6 +25,6 @@
 	});
 </script>
 
-<div bind:this={container} class="flex flex-nowrap" {id}>
+<div bind:this={container} class="flex flex-nowrap overflow-x-hidden" {id}>
 	<slot />
 </div>
