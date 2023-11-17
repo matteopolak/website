@@ -14,24 +14,4 @@
 	.btn {
 		@apply rounded-2xl;
 	}
-
-	[data-theme="dark"] {
-		.btn-github {
-			@apply bg-neutral-100 text-neutral-700;
-		}
-
-		.btn-linkedin {
-			@apply bg-blue-500 text-white;
-		}
-	}
-
-	[data-theme="light"] {
-		.btn-github {
-			@apply bg-neutral-800 text-neutral-100;
-		}
-
-		.btn-linkedin {
-			@apply bg-blue-500 text-white;
-		}
-	}
 }

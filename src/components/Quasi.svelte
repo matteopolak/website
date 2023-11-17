@@ -38,7 +38,7 @@
 			</h1>
 			<textarea
 				bind:value={code}
-				class="textarea p-4 resize-none font-mono rounded-none bg-base-100 leading-5 max-h-96 overflow-scroll h-fit"
+				class="textarea p-4 resize-none font-mono rounded-none bg-base-100 leading-5 max-h-96 overflow-hidden h-fit"
 			/>
 
 			<div class="p-4 font-mono whitespace-pre-wrap leading-5 overflow-hidden">

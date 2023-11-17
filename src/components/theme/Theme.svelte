@@ -4,14 +4,22 @@
 
 	onMount(() => {
 		themeChange(false);
+
+		theme =
+			localStorage.getItem('theme') ||
+			window.matchMedia('(prefers-color-scheme: dark)').matches
+				? 'dark'
+				: 'light';
 	});
+
+	let theme;
 </script>
 
 <label class="swap swap-rotate p-4">
 	<input type="checkbox" data-toggle-theme="dark,light" />
 
 	<svg
-		class="swap-on fill-current w-8 h-8"
+		class="swap-off fill-current w-8 h-8"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 	>
@@ -21,7 +29,7 @@
 	</svg>
 
 	<svg
-		class="swap-off fill-current w-8 h-8"
+		class="swap-on fill-current w-8 h-8"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 	>
