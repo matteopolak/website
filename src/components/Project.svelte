@@ -36,9 +36,9 @@
 			{project.title}
 		</span>
 
-		<div class="flex flex-wrap max-w-md gap-2">
+		<div class="flex flex-wrap place-items-center max-w-md gap-2 items-center">
 			{#each project.tags as tag, i}
-				<div use:reveal={animate(300 + 40 * i)}>
+				<div use:reveal={animate(300 + 40 * i)} class="flex place-items-center">
 					<Tag {tag} />
 				</div>
 			{/each}
