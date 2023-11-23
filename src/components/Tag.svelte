@@ -27,5 +27,5 @@
 		<Python />
 	{/if}
 
-	{tag}
+	#{tag.replaceAll(' ', '-').toLowerCase()}
 </span>

@@ -56,9 +56,15 @@ const config = {
 						'background-color': '#262626',
 						color: '#f5f5f5',
 					},
+					'.btn-github:hover': {
+						'background-color': '#1a1a1a',
+					},
 					'.btn-linkedin': {
 						'background-color': '#3b83f6',
 						color: '#fff',
+					},
+					'.btn-linkedin:hover': {
+						'background-color': '#1e6cd2',
 					},
 				}
 			},
@@ -83,9 +89,15 @@ const config = {
 						'background-color': '#f5f5f5',
 						color: '#404040',
 					},
+					'.btn-github:hover': {
+						'background-color': '#e5e5e5',
+					},
 					'.btn-linkedin': {
 						'background-color': '#3b83f6',
 						color: '#fff',
+					},
+					'.btn-linkedin:hover': {
+						'background-color': '#1e6cd2',
 					},
 				}
 			}

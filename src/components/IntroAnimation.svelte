@@ -104,7 +104,8 @@
 
 <style>
 	.animate-write-fade {
-		animation: write-fill 1.2s linear forwards,
+		animation:
+			write-fill 1.2s linear forwards,
 			shift-fade 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 		stroke-dasharray: 1000;
 		stroke-dashoffset: 1000;
