@@ -6,10 +6,14 @@
 	import Project from '$/components/Project.svelte';
 </script>
 
-<IntroAnimation />
+<div id="smooth-wrapper">
+	<div id="smooth-content">
+		<IntroAnimation />
 
-<HorizontalScroll id="projects">
-	{#each projects as project}
-		<Project {project} />
-	{/each}
-</HorizontalScroll>
+		<HorizontalScroll id="projects">
+			{#each projects as project}
+				<Project {project} />
+			{/each}
+		</HorizontalScroll>
+	</div>
+</div>
