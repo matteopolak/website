@@ -160,6 +160,7 @@ where
 {
   fn call(self, req: Request, state: S) -> Response {
     let t1 = T1::from_request(req, state);
+
     self(t1)
   }
 }
@@ -322,22 +323,22 @@ let request = Request {
 Now we can test out our routes:
 
 ```rust
-let route = get::<u8, _, _>(simple);
+let route = get(simple);
 let response = route(request.clone(), state);
 
 assert_eq!(response.content, "Hello, world!");
 
-let route = get::<u8, _, _>(with_count_and_state);
+let route = get(with_count_and_state);
 let response = route(request.clone(), state);
 
 assert_eq!(response.content, "state: 42, count: 10");
 
-let route = get::<u8, _, _>(with_state_and_expensive);
+let route = get(with_state_and_expensive);
 let response = route(request.clone(), state);
 
 assert_eq!(response.content, "state: 42, expensive: 37");
 
-let route = get::<u8, _, _>(with_json);
+let route = get(with_json);
 let response = route(request.clone(), state);
 
 assert_eq!(response.content, "hihihihihihi");
