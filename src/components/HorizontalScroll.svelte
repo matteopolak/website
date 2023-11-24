@@ -11,7 +11,7 @@
 
 		container.style.width = `${container.children.length * 100}%`;
 
-		gsap.to(container.children, {
+		const trigger = gsap.to(container.children, {
 			xPercent: -100 * (container.children.length - 1),
 			ease: 'none',
 			scrollTrigger: {
@@ -22,6 +22,10 @@
 				end: () => `+=${container.offsetWidth}`,
 			},
 		});
+
+		return () => {
+			trigger.kill();
+		};
 	});
 </script>
 

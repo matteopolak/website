@@ -2,10 +2,12 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import gsap from 'gsap';
+	import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 
 	import Introduction from './Introduction.svelte';
 
 	onMount(() => {
+		gsap.registerPlugin(ScrollToPlugin);
 		ready = true;
 	});
 

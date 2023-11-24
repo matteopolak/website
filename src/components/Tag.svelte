@@ -10,7 +10,7 @@
 	export let tag: string;
 </script>
 
-<span class="badge badge-sm md:badge-md lg:badge-lg badge-neutral gap-1">
+<span class="badge badge-md md:badge-lg badge-neutral gap-1">
 	{#if tag === 'Rust'}
 		<Rust />
 	{:else if tag === 'TypeScript'}
