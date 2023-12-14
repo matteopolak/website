@@ -11,9 +11,4 @@ export default defineConfig({
 			compiler: 'svelte',
 		}),
 	],
-	resolve: {
-		alias: {
-			$: '/src',
-		}
-	}
 });

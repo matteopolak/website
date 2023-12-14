@@ -1,4 +1,4 @@
-import type { Post } from '$/lib/types'
+import type { Post } from '$lib/types'
 
 export async function get() {
 	let posts: Post[] = [];
@@ -12,13 +12,13 @@ export async function get() {
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
 			const post = { ...metadata, slug } satisfies Post;
-			
+
 			if (post.published) posts.push(post);
 		}
 	}
 
 	posts.sort((first, second) =>
-    new Date(second.date).getTime() - new Date(first.date).getTime()
+		new Date(second.date).getTime() - new Date(first.date).getTime()
 	);
 
 	return posts;

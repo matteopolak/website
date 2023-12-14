@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	import Tag from '$/components/Tag.svelte';
-	import { formatDate } from '$/lib/util';
+	import Tag from '$lib/components/Tag.svelte';
+	import { formatDate } from '$lib/util';
 
 	export let data;
 

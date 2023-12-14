@@ -1,9 +1,9 @@
 <script>
-	import { projects } from '$/lib/projects';
+	import { projects } from '$lib/projects';
 
-	import HorizontalScroll from '$/components/HorizontalScroll.svelte';
-	import IntroAnimation from '$/components/IntroAnimation.svelte';
-	import Project from '$/components/Project.svelte';
+	import HorizontalScroll from '$lib/components/HorizontalScroll.svelte';
+	import IntroAnimation from '$lib/components/IntroAnimation.svelte';
+	import Project from '$lib/components/Project.svelte';
 </script>
 
 <div id="smooth-wrapper">

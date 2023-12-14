@@ -1,5 +1,5 @@
 <script lang="ts">
-	import init, { execute } from '$/lib/quasi/wasm';
+	import init, { execute } from '$lib/quasi/wasm';
 
 	const DEFAULT_INPUT = 'print "Hello, world!";';
 	const DEFAULT_OUTPUT = 'Hello, world!';

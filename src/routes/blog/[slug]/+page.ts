@@ -1,4 +1,4 @@
-import type { Post } from '$/lib/types'
+import type { Post } from '$lib/types'
 import { error } from '@sveltejs/kit'
 
 export async function load({ params }) {
@@ -11,6 +11,6 @@ export async function load({ params }) {
 			slug: params.slug,
 		};
 	} catch {
-		throw error(404, `Could not find ${params.slug}`);
+		error(404, `Could not find ${params.slug}`);
 	}
 }

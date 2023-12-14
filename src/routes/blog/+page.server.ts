@@ -1,9 +1,8 @@
-import { get } from '$/lib/server/posts.js'
+import { get } from '$lib/server/posts';
 
 export async function load() {
 	return {
-		streamed: {
-			posts: get()
-		}
+		posts: get()
+
 	};
 }

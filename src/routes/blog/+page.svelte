@@ -10,7 +10,7 @@
 	</h1>
 
 	<ul class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 place-content-center">
-		{#await data.streamed.posts}
+		{#await data.posts}
 			{#each { length: 6 } as _}
 				<PostCard />
 			{/each}

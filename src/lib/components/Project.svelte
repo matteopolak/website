@@ -4,10 +4,10 @@
 	import Monitor from '~icons/mdi/monitor';
 	import GitHub from '~icons/bxl/github';
 
-	import { animate } from '$/lib/animate';
-	import type { projects } from '$/lib/projects';
+	import { animate } from '$lib/animate';
+	import type { projects } from '$lib/projects';
 
-	import Quasi from '$/components/Quasi.svelte';
+	import Quasi from '$lib/components/Quasi.svelte';
 	import Tag from './Tag.svelte';
 
 	export let project: (typeof projects)[number];

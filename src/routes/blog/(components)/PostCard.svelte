@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Tag from '$/components/Tag.svelte';
-	import type { Post } from '$/lib/types';
+	import Tag from '$lib/components/Tag.svelte';
+	import type { Post } from '$lib/types';
 	import { reveal } from 'svelte-reveal';
 
 	export let post: Post | undefined = undefined;
