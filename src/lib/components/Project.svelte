@@ -14,15 +14,15 @@
 </script>
 
 <section
-	class="bg-base-200 flex flex-col lg:flex-row justify-center place-items-center gap-8 md:gap-12 lg:gap-24 w-screen h-screen p-4 md:p-8 max-h-screen"
+	class="bg-base-200 flex flex-col lg:flex-row justify-center place-items-center gap-8 md:gap-12 lg:gap-24 w-screen pt-32 p-4 md:p-8 h-screen"
 >
 	<a
 		href={project.website ?? project.repository}
-		class="hover:scale-105 transition-all duration-300 flex flex-col lg:flex-row justify-end h-full lg:py-16 w-full lg:w-auto max-w-xl lg:max-w-none"
+		class="hover:scale-105 transition-all duration-300 flex flex-col lg:flex-row justify-end max-h-64 lg:max-h-none lg:h-full lg:py-16 w-full lg:w-auto max-w-xl lg:max-w-none"
 		use:reveal={animate(100)}
 	>
 		<img
-			class="object-cover rounded-3xl overflow-hidden w-full lg:max-w-md max-h-32 lg:max-h-full lg:min-h-full shadow-static"
+			class="object-cover object-left-top rounded-3xl overflow-hidden w-full lg:max-w-md lg:max-h-full lg:min-h-full shadow-static"
 			alt={project.title}
 			src={project.thumbnail}
 		/>
@@ -52,7 +52,7 @@
 		</span>
 
 		{#if project.title === 'Quasi'}
-			<span use:reveal={animate(200)} class="w-full">
+			<span use:reveal={animate(200)} class="w-full hidden md:block">
 				<Quasi />
 			</span>
 		{/if}

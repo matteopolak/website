@@ -6,6 +6,9 @@
 	import Redis from '~icons/devicon-plain/redis';
 	import Nodejs from '~icons/devicon-plain/nodejs';
 	import Python from '~icons/devicon-plain/python';
+	import Drizzle from '~icons/simple-icons/drizzle';
+	import Trpc from '~icons/devicon-plain/trpc';
+	import Prisma from '~icons/simple-icons/prisma';
 
 	export let tag: string;
 </script>
@@ -25,7 +28,14 @@
 		<Nodejs />
 	{:else if tag === 'Python'}
 		<Python />
+	{:else if tag === 'Drizzle'}
+		<Drizzle />
+	{:else if tag === 'tRPC'}
+		<Trpc />
+	{:else if tag === 'Prisma'}
+		<Prisma />
 	{/if}
 
 	#{tag.replaceAll(' ', '-').toLowerCase()}
 </span>
+

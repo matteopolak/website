@@ -10,23 +10,23 @@ export type Project = {
 
 export const projects = [
 	{
+		title: 'Crave',
+		thumbnail: '/images/projects/crave.webp',
+		date: 'December 2023',
+		description:
+			'Crave is a YouTube-like recipe explorer with semantic recommendations and powerful search. It allows users to find recipes based on their ingredients, and it also recommends recipes based on their previous searches. It also includes a powerful search engine that allows users to search for recipes based on their ingredients, their preparation time, and even their nutritional value.',
+		repository: 'https://github.com/matteopolak/crave',
+		website: 'https://crave.matteopolak.com',
+		tags: ['Svelte', 'TypeScript', 'Drizzle', 'PostgreSQL', 'PyTorch', 'tRPC'],
+	},
+	{
 		title: 'Quasi',
 		thumbnail: '/images/projects/quasi.webp',
 		date: 'November 2023',
 		description:
 			'Quasi is an interpreted programming language with similar features to many mainstream languages. It supports variables, scopes, functions, expressions, and more.',
 		repository: 'https://github.com/matteopolak/quasi',
-		tags: ['Rust', 'Programming Language', 'Interpreter', 'Web Assembly'],
-	},
-	{
-		title: 'Noteboard',
-		thumbnail: '/images/projects/noteboard.webp',
-		date: 'September 2023',
-		description:
-			'Noteboard is a music-based collaborative drawing tool. It allows everyone to create and share their own music creations in real-time with anyone around the world.',
-		repository: 'https://github.com/matteopolak/noteboard',
-		website: 'https://noteboard.matteopolak.com',
-		tags: ['Svelte', 'TypeScript'],
+		tags: ['Rust', 'Programming Language', 'Web Assembly'],
 	},
 	{
 		title: 'StatPixel',
@@ -46,6 +46,24 @@ export const projects = [
 			'Svelte',
 			'TypeScript',
 		],
+	},
+	{
+		title: 'Basket',
+		thumbnail: '/images/projects/basket.webp',
+		date: 'January 2024',
+		description: 'Basket is a simple HTTP/1.1 client library for Rust. It comes with support for JSON and XML out of the box, with a clean and intuitive API.',
+		repository: 'https://github.com/matteopolak/basket',
+		tags: ['Rust', 'HTTP', 'Serde'],
+	},
+	{
+		title: 'Noteboard',
+		thumbnail: '/images/projects/noteboard.webp',
+		date: 'September 2023',
+		description:
+			'Noteboard is a music-based collaborative drawing tool. It allows everyone to create and share their own music creations in real-time with anyone around the world.',
+		repository: 'https://github.com/matteopolak/noteboard',
+		website: 'https://noteboard.matteopolak.com',
+		tags: ['Svelte', 'TypeScript'],
 	},
 	{
 		title: 'Jukebox Music Client',
@@ -119,5 +137,5 @@ export const projects = [
 		repository: 'https://github.com/matteopolak/password',
 		tags: ['Rust'],
 	},
-	
+
 ] satisfies Project[];

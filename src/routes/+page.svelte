@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { projects } from '$lib/projects';
 
 	import HorizontalScroll from '$lib/components/HorizontalScroll.svelte';
