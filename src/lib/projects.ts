@@ -29,6 +29,15 @@ export const projects = [
 		tags: ['Rust', 'Programming Language', 'Web Assembly'],
 	},
 	{
+		title: 'Bitcoin Miner',
+		thumbnail: '/images/projects/bitcoin-miner.webp',
+		date: 'April 2024',
+		description:
+			'A solo GPU- and CPU-capable Bitcoin miner with block-aware mining and a SHA256 compute shader. It is designed to be efficient and fast, with a focus on performance and ease of use.',
+		repository: 'https://github.com/matteopolak/miner',
+		tags: ['Rust', 'Blockchain', 'Hashing', 'WGSL', 'wgpu'],
+	},
+	{
 		title: 'StatPixel',
 		thumbnail: '/images/projects/statpixel.webp',
 		date: 'August 2023',
