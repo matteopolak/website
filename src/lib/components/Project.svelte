@@ -19,7 +19,7 @@
 >
 	<a
 		href={project.website ?? project.repository}
-		class="hover:scale-105 transition-all duration-300 flex flex-col lg:flex-row justify-end max-h-64 lg:max-h-none lg:h-full lg:py-16 w-full lg:w-auto max-w-xl lg:max-w-none"
+		class="hover:scale-105 transition-all duration-300 flex flex-col lg:flex-row justify-end {project.id === 'quasi' ? 'max-h-28' : 'max-h-64'} lg:max-h-none lg:h-full lg:py-16 w-full lg:w-auto max-w-xl lg:max-w-none"
 		use:reveal={animate(100)}
 	>
 		<img
