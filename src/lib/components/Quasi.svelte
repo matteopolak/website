@@ -31,23 +31,22 @@
 {#await init()}
 	<div class="max-w-xl w-full skeleton h-44" />
 {:then}
-	<div class="card bg-base-300 max-w-xl w-full overflow-hidden h-44">
-		<div class="card-body p-0 gap-0">
-			<h1 class="text-sm bg-base-100 p-3">
-				Quasi interpreter (executed with Wasm)
-			</h1>
-			<textarea
-				bind:value={code}
-				class="textarea p-4 resize-none font-mono rounded-none bg-base-100 leading-5 max-h-96 overflow-hidden h-fit"
-			/>
+	<div class="grid grid-cols-2 rounded-xl bg-base-300 max-w-xl w-full max-h-44 h-full">
+		<h1 class="text-xs p-3 col-span-full h-fit">
+			Quasi interpreter (executed with Wasm)
+		</h1>
 
-			<div class="p-4 font-mono whitespace-pre-wrap leading-5 overflow-hidden">
-				{#if error}
-					<span class="text-error">{error}</span>
-				{:else}
-					{output}
-				{/if}
-			</div>
+		<textarea
+			bind:value={code}
+			class="textarea p-4 resize-none font-mono rounded-none leading-5 bg-base-200 rounded-bl-2xl overflow-auto max-h-full min-h-32"
+		/>
+
+		<div class="p-4 font-mono whitespace-pre-wrap leading-5 text-xs overflow-auto">
+			{#if error}
+				<span class="text-error overflow-auto">{error}</span>
+			{:else}
+				{output}
+			{/if}
 		</div>
 	</div>
 {/await}

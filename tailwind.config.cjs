@@ -52,6 +52,9 @@ const config = {
 					'warning-content': '#fff',
 					error: '#f56565',
 					'error-content': '#fff',
+					'.text-extreme': {
+						color: '#000',
+					},
 					'.btn-github': {
 						'background-color': '#262626',
 						color: '#f5f5f5',
@@ -89,6 +92,9 @@ const config = {
 					'warning-content': '#000',
 					error: '#fca5a5',
 					'error-content': '#000',
+					'.text-extreme': {
+						color: '#fff',
+					},
 					'.btn-github': {
 						'background-color': '#f5f5f5',
 						'border-color': '#f5f5f5',

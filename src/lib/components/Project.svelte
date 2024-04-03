@@ -14,7 +14,8 @@
 </script>
 
 <section
-	class="bg-base-200 flex flex-col lg:flex-row justify-center place-items-center gap-8 md:gap-12 lg:gap-24 w-screen pt-32 p-4 md:p-8 h-screen"
+	class="flex flex-col lg:flex-row justify-center place-items-center gap-8 md:gap-12 lg:gap-24 pt-32 p-4 md:p-8 h-screen"
+	id={project.id}
 >
 	<a
 		href={project.website ?? project.repository}

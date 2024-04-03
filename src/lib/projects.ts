@@ -1,5 +1,6 @@
 export type Project = {
 	title: string;
+	id: string;
 	thumbnail: string;
 	date: string;
 	description: string;
@@ -11,6 +12,7 @@ export type Project = {
 export const projects = [
 	{
 		title: 'Quasi',
+		id: 'quasi',
 		thumbnail: '/images/projects/quasi.webp',
 		date: 'November 2023',
 		description:
@@ -20,6 +22,7 @@ export const projects = [
 	},
 	{
 		title: 'Bitcoin Miner',
+		id: 'bitcoin-miner',
 		thumbnail: '/images/projects/bitcoin-miner.webp',
 		date: 'April 2024',
 		description:
@@ -29,6 +32,7 @@ export const projects = [
 	},
 	{
 		title: 'Crave',
+		id: 'crave',
 		thumbnail: '/images/projects/crave.webp',
 		date: 'December 2023',
 		description:
@@ -39,6 +43,7 @@ export const projects = [
 	},
 	{
 		title: 'StatPixel',
+		id: 'statpixel',
 		thumbnail: '/images/projects/statpixel.webp',
 		date: 'August 2023',
 		description:
@@ -58,6 +63,7 @@ export const projects = [
 	},
 	{
 		title: 'Basket',
+		id: 'basket',
 		thumbnail: '/images/projects/basket.webp',
 		date: 'January 2024',
 		description: 'Basket is a simple HTTP/1.1 client library for Rust. It comes with support for JSON and XML out of the box, with a clean and intuitive API.',
@@ -66,6 +72,7 @@ export const projects = [
 	},
 	{
 		title: 'Noteboard',
+		id: 'noteboard',
 		thumbnail: '/images/projects/noteboard.webp',
 		date: 'September 2023',
 		description:
@@ -76,6 +83,7 @@ export const projects = [
 	},
 	{
 		title: 'Jukebox Music Client',
+		id: 'jukebox-music-client',
 		thumbnail: '/images/projects/jukebox-music-client.webp',
 		date: 'June 2022',
 		description:
@@ -85,6 +93,7 @@ export const projects = [
 	},
 	{
 		title: 'Minecraft Name Index',
+		id: 'minecraft-name-index',
 		thumbnail: '/images/projects/minecraft-name-index.webp',
 		date: 'January 2023',
 		description:
@@ -94,6 +103,7 @@ export const projects = [
 	},
 	{
 		title: 'Twitch Chat Downloader',
+		id: 'twitch-chat-downloader',
 		thumbnail: '/images/projects/twitch-chat-downloader.webp',
 		date: 'November 2022',
 		description:
@@ -103,6 +113,7 @@ export const projects = [
 	},
 	{
 		title: 'Discord Bot Framework',
+		id: 'discord-bot-framework',
 		thumbnail: '/images/projects/discord-bot-framework.webp',
 		date: 'October 2022',
 		description:
@@ -112,6 +123,7 @@ export const projects = [
 	},
 	{
 		title: 'Chat Generator AI',
+		id: 'chat-generator-ai',
 		thumbnail: '/images/projects/chat-generator-ai.webp',
 		date: 'November 2022',
 		description:
@@ -121,6 +133,7 @@ export const projects = [
 	},
 	{
 		title: 'BaerScript',
+		id: 'baerscript',
 		thumbnail: '/images/projects/baerscript-programming-language.webp',
 		date: 'September 2022',
 		description:
@@ -130,6 +143,7 @@ export const projects = [
 	},
 	{
 		title: 'Minecraft Authenticator',
+		id: 'minecraft-authenticator',
 		thumbnail: '/images/projects/minecraft-authenticator.webp',
 		date: 'January 2023',
 		description:
@@ -139,6 +153,7 @@ export const projects = [
 	},
 	{
 		title: 'Password Generator',
+		id: 'password-generator',
 		thumbnail: '/images/projects/password-generator.webp',
 		date: 'August 2021',
 		description:

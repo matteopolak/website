@@ -1,13 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import gsap from 'gsap';
-	import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 
 	import Introduction from './Introduction.svelte';
 
 	onMount(() => {
-		gsap.registerPlugin(ScrollToPlugin);
 		ready = true;
 	});
 
@@ -56,20 +53,15 @@
 	{/if}
 
 	<div class="absolute bottom-8 left-0 right-0 grid place-items-center">
-		<button
-			on:click={() =>
-				gsap.to(window, {
-					duration: 0.7,
-					scrollTo: '#projects',
-					ease: 'power2.inOut',
-				})}
+		<a
 			class="hover:translate-y-1 transition-all duration-300 relative"
+			href="#projects"
 		>
 			<svg class="w-10 h-10 fill-base-content" viewBox="0 0 24 24">
 				<path d="M18 6.41 16.59 5 12 9.58 7.41 5 6 6.41l6 6z" />
 				<path d="m18 13-1.41-1.41L12 16.17l-4.59-4.58L6 13l6 6z" />
 			</svg>
-		</button>
+		</a>
 
 		{#if ready}
 			<div

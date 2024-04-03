@@ -2,7 +2,7 @@ import preprocess from "svelte-preprocess";
 import adapter from "@sveltejs/adapter-cloudflare";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { mdsvex, escapeSvelte } from "mdsvex";
-import shiki from 'shiki';
+import { codeToHtml } from 'shiki';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,9 +14,10 @@ const config = {
 			extension: '.md',
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
-					const highlighter = await shiki.getHighlighter({ theme: 'github-dark-dimmed' })
-					const html = escapeSvelte(highlighter.codeToHtml(code, { lang }))
-					return `{@html \`${html}\` }`
+					const raw = await codeToHtml(code, { lang, theme: 'github-dark-dimmed' });
+					const html = escapeSvelte(raw);
+
+					return `{@html \`${html}\` }`;
 				}
 			},
 		}),
