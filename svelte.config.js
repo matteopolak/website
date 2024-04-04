@@ -14,7 +14,7 @@ const config = {
 			extension: '.md',
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
-					const raw = await codeToHtml(code, { lang, theme: 'github-dark-dimmed' });
+					const raw = await codeToHtml(code, { lang, theme: 'github-dark-dimmed',  });
 					const html = escapeSvelte(raw);
 
 					return `{@html \`${html}\` }`;

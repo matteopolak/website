@@ -51,3 +51,20 @@
 		</div>
 	</article>
 </div>
+
+<style>
+	article :global(code) {
+		counter-reset: step;
+		counter-increment: step 0;
+	}
+
+	article :global(code .line::before) {
+		content: counter(step);
+		counter-increment: step;
+		width: 0.5rem;
+		margin-right: 1rem;
+		display: inline-block;
+		text-align: right;
+		color: rgba(115,138,148,.4)
+	}
+</style>

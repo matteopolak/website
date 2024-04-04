@@ -31,7 +31,7 @@ There are two different things going on here: the first is the `State` extractor
 passed into the handler, but does not consume the request. On the other hand, the `Json` extractor
 consumes the request and deserializes the body into the `Data` struct.
 
-Let's start by implementing some basic reuqest & response structs and a simple trait for our non-consuming extractors:
+Let's start by implementing some basic request & response structs and a simple trait for our non-consuming extractors:
 
 ```rust
 /// A "part" of a request that can be taken out without consuming the request.

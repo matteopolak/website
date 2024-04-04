@@ -1,7 +1,7 @@
-import type { Post } from '$lib/types'
+import type { Post } from '$lib/types';
 
-export async function get() {
-	let posts: Post[] = [];
+function getPosts() {
+	const posts: Post[] = [];
 
 	const paths = import.meta.glob('/src/posts/*.md', { eager: true });
 
@@ -22,4 +22,10 @@ export async function get() {
 	);
 
 	return posts;
+}
+
+const POSTS = getPosts();
+
+export function get() {
+	return POSTS;
 }
