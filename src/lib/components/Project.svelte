@@ -14,7 +14,7 @@
 </script>
 
 <section
-	class="flex flex-col lg:flex-row justify-center place-items-center gap-8 md:gap-12 lg:gap-24 pt-32 p-4 md:p-8 lg:h-screen"
+	class="flex flex-col lg:flex-row justify-center place-items-center gap-8 md:gap-12 lg:gap-24 pt-32 p-4 md:p-8 h-screen"
 	id={project.id}
 >
 	<a
