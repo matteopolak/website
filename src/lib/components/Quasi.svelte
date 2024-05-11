@@ -1,23 +1,23 @@
 <script lang="ts">
-	import init, { execute } from '$lib/quasi/wasm';
+	import init, { execute } from "$lib/quasi/wasm";
 
 	const DEFAULT_INPUT = 'print "Hello, world!";';
-	const DEFAULT_OUTPUT = 'Hello, world!';
+	const DEFAULT_OUTPUT = "Hello, world!";
 
 	let code = DEFAULT_INPUT;
 	let output = DEFAULT_OUTPUT;
-	let error = '';
+	let error = "";
 
 	$: if (code !== DEFAULT_INPUT) {
 		try {
 			output = executeCode(code);
-			error = '';
+			error = "";
 		} catch (e) {
 			error = e as string;
 		}
 	} else {
 		output = DEFAULT_OUTPUT;
-		error = '';
+		error = "";
 	}
 
 	function executeCode(code: string) {
@@ -29,19 +29,21 @@
 </script>
 
 {#await init()}
-	<div class="max-w-xl w-full skeleton h-44" />
+	<div class="w-full skeleton h-full" />
 {:then}
-	<div class="grid grid-cols-2 rounded-xl bg-base-300 max-w-xl w-full max-h-44 h-full">
-		<h1 class="text-xs p-3 col-span-full h-fit">
+	<div class="grid grid-cols-2 rounded-xl bg-base-300 h-full w-full">
+		<h1 class="text-xs p-3 col-span-full">
 			Quasi interpreter (executed with Wasm)
 		</h1>
 
 		<textarea
 			bind:value={code}
-			class="textarea p-4 resize-none font-mono rounded-none leading-5 bg-base-200 rounded-bl-2xl overflow-auto max-h-full min-h-32"
+			class="textarea p-4 resize-none font-mono rounded-none leading-5 bg-base-200 rounded-bl-2xl overflow-auto h-32"
 		/>
 
-		<div class="p-4 font-mono whitespace-pre-wrap leading-5 text-xs overflow-auto">
+		<div
+			class="p-4 font-mono whitespace-pre-wrap leading-5 text-xs overflow-auto h-32"
+		>
 			{#if error}
 				<span class="text-error overflow-auto">{error}</span>
 			{:else}
