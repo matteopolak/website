@@ -1,25 +1,25 @@
 <script lang="ts">
-	import { reveal } from 'svelte-reveal';
-	import Arrow from '~icons/mdi/arrow-forward';
-	import Monitor from '~icons/mdi/monitor';
-	import GitHub from '~icons/bxl/github';
+	import { reveal } from "svelte-reveal";
+	import Arrow from "~icons/mdi/arrow-forward";
+	import Monitor from "~icons/mdi/monitor";
+	import GitHub from "~icons/bxl/github";
 
-	import { animate } from '$lib/animate';
-	import type { projects } from '$lib/projects';
+	import { animate } from "$lib/animate";
+	import type { projects } from "$lib/projects";
 
-	import Quasi from '$lib/components/Quasi.svelte';
-	import Tag from './Tag.svelte';
+	import Quasi from "$lib/components/Quasi.svelte";
+	import Tag from "./Tag.svelte";
 
 	export let project: (typeof projects)[number];
 </script>
 
 <section
-	class="flex flex-col lg:flex-row justify-center place-items-center gap-8 md:gap-12 lg:gap-24 pt-32 p-4 md:p-8 h-screen"
+	class="flex flex-col lg:flex-row justify-center place-items-center gap-8 md:gap-12 lg:gap-24 pt-32 p-4 md:p-8 lg:h-screen"
 	id={project.id}
 >
 	<a
 		href={project.website ?? project.repository}
-		class="hover:scale-105 transition-all duration-300 flex flex-col lg:flex-row justify-end {project.id === 'quasi' ? 'max-h-28' : 'max-h-64'} lg:max-h-none lg:h-full lg:py-16 w-full lg:w-auto max-w-xl lg:max-w-none"
+		class="hover:scale-105 transition-all duration-300 flex flex-col lg:flex-row justify-end max-h-96 lg:max-h-none lg:h-full lg:py-16 w-full lg:w-auto max-w-xl lg:max-w-none"
 		use:reveal={animate(100)}
 	>
 		<img
@@ -52,8 +52,8 @@
 			{project.description}
 		</span>
 
-		{#if project.title === 'Quasi'}
-			<span use:reveal={animate(200)} class="w-full hidden md:block">
+		{#if project.title === "Quasi"}
+			<span use:reveal={animate(200)} class="w-full">
 				<Quasi />
 			</span>
 		{/if}
