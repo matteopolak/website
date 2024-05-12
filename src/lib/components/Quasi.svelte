@@ -29,9 +29,9 @@
 </script>
 
 {#await init()}
-	<div class="w-full skeleton h-full" />
+	<div class="w-full skeleton h-full max-w-xl" />
 {:then}
-	<div class="grid grid-cols-2 rounded-xl bg-base-300 h-full w-full">
+	<div class="grid grid-cols-2 rounded-xl bg-base-300 h-full w-full max-w-xl">
 		<h1 class="text-xs p-3 col-span-full">
 			Quasi interpreter (executed with Wasm)
 		</h1>
