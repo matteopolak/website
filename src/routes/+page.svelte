@@ -14,7 +14,7 @@
 <nav
 	class="hidden md:block sticky top-1/2 transform -translate-y-1/2 right-0 float-right mr-4 lg:mr-8 max-w-sm text-right z-20"
 >
-	<div class="flex flex-col gap-2 text-sm">
+	<div class="flex flex-col gap-2 text-xs">
 		{#each projects as project, i}
 			<a
 				class="block"
