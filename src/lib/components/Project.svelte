@@ -52,8 +52,8 @@
 			{project.description}
 		</span>
 
-		{#if project.title === "Quasi"}
-			<span use:reveal={animate(200)} class="w-full max-h-44">
+		{#if project.id === "quasi"}
+			<span use:reveal={animate(200)} class="w-full max-w-xl max-h-44">
 				<Quasi />
 			</span>
 		{/if}
