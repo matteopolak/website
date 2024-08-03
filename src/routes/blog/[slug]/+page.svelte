@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount } from "svelte";
 
-	import Tag from '$lib/components/Tag.svelte';
-	import { formatDate } from '$lib/util';
+	import Tag from "$lib/components/Tag.svelte";
+	import { formatDate } from "$lib/util";
+	import Arrow from "~icons/mdi/arrow-back";
 
 	export let data;
 
@@ -10,7 +11,7 @@
 	let readingTime = 0;
 
 	onMount(() => {
-		readingTime = Math.ceil(article.innerText.split(' ').length / 125);
+		readingTime = Math.ceil(article.innerText.split(" ").length / 125);
 	});
 </script>
 
@@ -19,6 +20,10 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
+
+<a href="/blog" class="btn btn-lg btn-ghost w-fit m-2">
+	<Arrow /> Back to blog
+</a>
 
 <div class="flex place-content-center py-16 md:py-32 lg:py-48 w-full px-8">
 	<article class="max-w-2xl w-full grid gap-8">
@@ -49,6 +54,17 @@
 		<div class="prose max-w-full overflow-x-hidden" bind:this={article}>
 			<svelte:component this={data.content} />
 		</div>
+
+		<script
+			src="https://utteranc.es/client.js"
+			repo="matteopolak/website"
+			issue-term="pathname"
+			label="comment"
+			theme="github-dark"
+			crossorigin="anonymous"
+			async
+		>
+		</script>
 	</article>
 </div>
 
@@ -65,6 +81,7 @@
 		margin-right: 1rem;
 		display: inline-block;
 		text-align: right;
-		color: rgba(115,138,148,.4)
+		color: rgba(115, 138, 148, 0.4);
 	}
 </style>
+
