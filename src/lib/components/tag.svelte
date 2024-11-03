@@ -10,10 +10,14 @@
 	import Trpc from '~icons/devicon-plain/trpc';
 	import Prisma from '~icons/simple-icons/prisma';
 
-	export let tag: string;
+	interface Props {
+		tag: string;
+	}
+
+	let { tag }: Props = $props();
 </script>
 
-<span class="badge badge-md md:badge-lg badge-neutral gap-1">
+<span class="badge badge-neutral badge-md gap-1 md:badge-lg">
 	{#if tag === 'Rust'}
 		<Rust />
 	{:else if tag === 'TypeScript'}
@@ -38,4 +42,3 @@
 
 	#{tag.replaceAll(' ', '-').toLowerCase()}
 </span>
-

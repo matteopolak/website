@@ -1,44 +1,46 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
+	type Theme = 'dark' | 'light' | 'loading';
+
 	onMount(() => {
-		theme =
-			(localStorage.getItem('theme') as 'dark' | 'light' | null) ?? 'loading';
+		theme = (localStorage.getItem('theme') as Theme | null) ?? 'loading';
 
 		if (theme === 'loading') {
 			const query = window.matchMedia('(prefers-color-scheme: dark)');
 
 			theme = query.matches ? 'dark' : 'light';
 
-			query.addEventListener('change', e => {
+			query.addEventListener('change', (e) => {
 				theme = e.matches ? 'dark' : 'light';
 			});
 		}
 	});
 
-	let theme: 'dark' | 'light' | 'loading' = 'loading';
+	let theme: Theme = $state('loading');
 
-	$: {
+	$effect(() => {
 		if (theme !== 'loading') {
 			document.documentElement.setAttribute('data-theme', theme);
 		}
-	}
+	});
 </script>
 
 {#if theme === 'loading'}
-	<div class="loading loading-spinner w-8 h-8 m-4" />
+	<div class="loading loading-spinner m-4 h-8 w-8"></div>
 {:else}
 	<button
-		class="swap swap-rotate p-4 swap-theme"
+		class="swap-theme swap swap-rotate p-4"
 		class:swap-active={theme === 'dark'}
-		on:click={() => {
+		onclick={() => {
 			theme = theme === 'dark' ? 'light' : 'dark';
 
 			localStorage.setItem('theme', theme);
 		}}
+		aria-label="Toggle theme"
 	>
 		<svg
-			class="swap-on fill-current w-8 h-8"
+			class="swap-on h-8 w-8 fill-current"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 		>
@@ -48,7 +50,7 @@
 		</svg>
 
 		<svg
-			class="swap-off fill-current w-8 h-8"
+			class="swap-off h-8 w-8 fill-current"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 		>

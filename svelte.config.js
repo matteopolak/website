@@ -1,35 +1,30 @@
-import preprocess from "svelte-preprocess";
-import adapter from "@sveltejs/adapter-cloudflare";
-import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
-import { mdsvex, escapeSvelte } from "mdsvex";
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex, escapeSvelte } from 'mdsvex';
 import { codeToHtml } from 'shiki';
+import { sveltePreprocess } from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: [
-		preprocess({
-			postcss: true,
-		}),
+		sveltePreprocess({ postcss: true }),
+		vitePreprocess(),
 		mdsvex({
 			extension: '.md',
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
-					const raw = await codeToHtml(code, { lang, theme: 'github-dark-dimmed',  });
+					const raw = await codeToHtml(code, { lang, theme: 'github-dark-dimmed' });
 					const html = escapeSvelte(raw);
 
 					return `{@html \`${html}\` }`;
 				}
-			},
-		}),
-		vitePreprocess(),
+			}
+		})
 	],
 	kit: {
-		adapter: adapter(),
+		adapter: adapter()
 	},
-	extensions: [
-		'.svelte',
-		'.md',
-	]
+	extensions: ['.svelte', '.md']
 };
 
 export default config;

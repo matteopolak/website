@@ -1,15 +1,15 @@
 <script lang="ts">
-	export let year = new Date().getFullYear();
+	let { year = new Date().getFullYear() } = $props();
 </script>
 
-<footer class="footer p-10 bg-neutral text-neutral-content">
+<footer class="footer bg-neutral p-10 text-neutral-content">
 	<div class="my-auto">
 		<p>© {year} Matthew Polak. All rights reserved.</p>
 	</div>
 	<div>
 		<span class="footer-title">Social</span>
 		<div class="grid grid-flow-col gap-4">
-			<a href="https://linkedin.com/in/matteo-polak">
+			<a href="https://linkedin.com/in/matteo-polak" aria-label="LinkedIn">
 				<svg
 					class="fill-current"
 					width="24"
@@ -23,7 +23,7 @@
 					/>
 				</svg>
 			</a>
-			<a href="https://github.com/matteopolak">
+			<a href="https://github.com/matteopolak" aria-label="GitHub">
 				<svg
 					class="fill-current"
 					xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
 					/>
 				</svg>
 			</a>
-			<a href="https://twitter.com/matteopolak">
+			<a href="https://twitter.com/matteopolak" aria-label="Twitter">
 				<svg
 					class="fill-current"
 					xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@
 					/>
 				</svg>
 			</a>
-			<a href="https://instagram.com/matteo.polak">
+			<a href="https://instagram.com/matteo.polak" aria-label="Instagram">
 				<svg
 					class="fill-current"
 					viewBox="18 18 96 96.3"

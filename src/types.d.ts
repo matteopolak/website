@@ -9,9 +9,7 @@ declare module '@sveltejs/svelte-scroller' {
 		progress: number;
 	}
 
-	interface ScrollerEvents {
-
-	}
+	type ScrollerEvents = never;
 
 	interface ScrollerSlots {
 		background: Record<string, never>;
@@ -22,7 +20,5 @@ declare module '@sveltejs/svelte-scroller' {
 		ScrollerProps,
 		ScrollerEvents,
 		ScrollerSlots
-	> {
-
-	}
+	> {}
 }

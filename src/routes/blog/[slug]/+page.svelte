@@ -1,17 +1,15 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import Tag from '$lib/components/tag.svelte';
+	import { formatDate } from '$lib/util';
+	import Arrow from '~icons/mdi/arrow-back';
 
-	import Tag from "$lib/components/Tag.svelte";
-	import { formatDate } from "$lib/util";
-	import Arrow from "~icons/mdi/arrow-back";
+	let { data } = $props();
 
-	export let data;
+	let article: HTMLDivElement | undefined = $state();
+	let readingTime = $state(0);
 
-	let article: HTMLDivElement;
-	let readingTime = 0;
-
-	onMount(() => {
-		readingTime = Math.ceil(article.innerText.split(" ").length / 125);
+	$effect(() => {
+		if (article) readingTime = Math.ceil(article.innerText.split(' ').length / 125);
 	});
 </script>
 
@@ -21,14 +19,14 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<a href="/blog" class="btn btn-lg btn-ghost w-fit m-2">
+<a href="/blog" class="btn btn-ghost btn-lg m-2 w-fit">
 	<Arrow /> Back to blog
 </a>
 
-<div class="flex place-content-center py-16 md:py-32 lg:py-48 w-full px-8">
-	<article class="max-w-2xl w-full grid gap-8">
+<div class="flex w-full place-content-center px-8 py-16 md:py-32 lg:py-48">
+	<article class="grid w-full max-w-2xl gap-8">
 		<hgroup class="grid gap-4">
-			<h1 class="font-bold text-4xl md:text-5xl">{data.meta.title}</h1>
+			<h1 class="text-4xl font-bold md:text-5xl">{data.meta.title}</h1>
 
 			<p>
 				{readingTime} min read
@@ -43,16 +41,16 @@
 			{/each}
 		</div>
 
-		<figure class="w-full h-56 md:h-64 rounded-2xl overflow-hidden">
+		<figure class="h-56 w-full overflow-hidden rounded-2xl md:h-64">
 			<img
 				src="/images/blog/{data.slug}.webp"
 				alt={data.meta.title}
-				class="object-cover w-full h-full"
+				class="h-full w-full object-cover"
 			/>
 		</figure>
 
 		<div class="prose max-w-full overflow-x-hidden" bind:this={article}>
-			<svelte:component this={data.content} />
+			<data.content />
 		</div>
 
 		<script
@@ -84,4 +82,3 @@
 		color: rgba(115, 138, 148, 0.4);
 	}
 </style>
-

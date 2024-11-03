@@ -1,4 +1,4 @@
-import { error } from '@sveltejs/kit'
+import { error } from '@sveltejs/kit';
 
 export async function load({ params }) {
 	try {
@@ -7,7 +7,7 @@ export async function load({ params }) {
 		return {
 			content: post.default,
 			meta: post.metadata,
-			slug: params.slug,
+			slug: params.slug
 		};
 	} catch {
 		error(404, `Could not find ${params.slug}`);

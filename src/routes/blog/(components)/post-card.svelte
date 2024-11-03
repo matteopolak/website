@@ -1,28 +1,31 @@
 <script lang="ts">
-	import Tag from '$lib/components/Tag.svelte';
+	import Tag from '$lib/components/tag.svelte';
 	import type { Post } from '$lib/types';
 	import { reveal } from 'svelte-reveal';
 
-	export let post: Post | undefined = undefined;
+	interface Props {
+		post?: Post | undefined;
+	}
+
+	let { post = undefined }: Props = $props();
 </script>
 
 {#if post}
 	<a
-		class="card w-96 h-[32rem] shadow-xl hover:scale-105 bg-base-300 transition-all duration-300"
+		class="card h-[32rem] w-96 bg-base-300 shadow-xl transition-all duration-300 hover:scale-105"
 		href="/blog/{post.slug}"
 		use:reveal={{
 			delay: 100,
 			duration: 300,
 			y: 5,
-			easing: 'easeInOutSine',
-			transition: 'fly',
+			easing: 'easeInOutSine'
 		}}
 	>
 		<figure>
 			<img
 				src="/images/blog/{post.slug}.webp"
 				alt={post.title}
-				class="object-cover w-full h-full"
+				class="h-full w-full object-cover"
 			/>
 		</figure>
 		<div class="card-body h-full">
@@ -37,5 +40,5 @@
 		</div>
 	</a>
 {:else}
-	<div class="card w-96 h-[32rem] shadow-xl skeleton" />
+	<div class="card skeleton h-[32rem] w-96 shadow-xl"></div>
 {/if}

@@ -1,21 +1,20 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
-	import Introduction from './Introduction.svelte';
+	import Introduction from './introduction.svelte';
 
-	onMount(() => {
+	$effect(() => {
 		ready = true;
 	});
 
-	let ready = false;
+	let ready = $state(false);
 </script>
 
 <div class="relative h-screen">
 	<svg
 		viewBox="-350 -350 800 800"
 		xmlns="http://www.w3.org/2000/svg"
-		class="w-full h-full absolute top-0 left-0 -z-10"
+		class="absolute left-0 top-0 -z-10 h-full w-full"
 	>
 		<circle cx="50" cy="35" r="80" class="fill-base-200">
 			<animate
@@ -45,7 +44,7 @@
 			transition:fly={{
 				delay: 1_100,
 				duration: 1_000,
-				x: -40,
+				x: -40
 			}}
 		>
 			<Introduction />
@@ -54,25 +53,24 @@
 
 	<div class="absolute bottom-8 left-0 right-0 grid place-items-center">
 		<a
-			class="hover:translate-y-1 transition-all duration-300 relative"
+			class="relative transition-all duration-300 hover:translate-y-1"
 			href="#projects"
+			aria-label="Scroll to projects"
 		>
-			<svg class="w-10 h-10 fill-base-content" viewBox="0 0 24 24">
+			<svg class="h-10 w-10 fill-base-content" viewBox="0 0 24 24">
 				<path d="M18 6.41 16.59 5 12 9.58 7.41 5 6 6.41l6 6z" />
 				<path d="m18 13-1.41-1.41L12 16.17l-4.59-4.58L6 13l6 6z" />
 			</svg>
 		</a>
 
 		{#if ready}
-			<div
-				class="absolute -translate-y-16 fill-primary h-16 w-16 hidden md:block"
-			>
+			<div class="absolute hidden h-16 w-16 -translate-y-16 fill-primary md:block">
 				<span
-					class="text-primary absolute translate-x-20 -translate-y-4 w-64 text-xl font-into-light"
+					class="absolute w-64 -translate-y-4 translate-x-20 font-into-light text-xl text-primary"
 					transition:fly={{
 						delay: 1_500,
 						duration: 1_000,
-						x: 5,
+						x: 5
 					}}>Check out my projects!</span
 				>
 
@@ -82,7 +80,7 @@
 					transition:fly={{
 						delay: 1_500,
 						duration: 1_000,
-						y: -5,
+						y: -5
 					}}
 				>
 					<path
@@ -96,7 +94,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.animate-write-fade {
 		animation:
 			write-fill 1.2s linear forwards,

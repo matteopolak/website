@@ -17,9 +17,7 @@ function getPosts() {
 		}
 	}
 
-	posts.sort((first, second) =>
-		new Date(second.date).getTime() - new Date(first.date).getTime()
-	);
+	posts.sort((first, second) => new Date(second.date).getTime() - new Date(first.date).getTime());
 
 	return posts;
 }

@@ -1,4 +1,4 @@
-type DateStyle = Intl.DateTimeFormatOptions['dateStyle']
+type DateStyle = Intl.DateTimeFormatOptions['dateStyle'];
 
 export function formatDate(date: string, dateStyle: DateStyle = 'long', locales = 'en') {
 	const dateToFormat = new Date(date.replaceAll('-', '/'));

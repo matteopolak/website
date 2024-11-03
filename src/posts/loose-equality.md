@@ -21,37 +21,37 @@ false == '0b0' // true
 
 Okay, the first few are pretty well known, so let's start with `[] == false`.
 
-### [] == false
+### \[\] == false
 
 When an Object is compared to a String, Number, BigInt, or Symbol, the object is converted
 into a primitive value and compared again. In this case, the object is converted to the string `''`,
 then the boolean is converted to the number `0`, then the empty string is converted to the number `0`.
 
-Here's what's *really* happening:
+Here's what's _really_ happening:
 
 > note that Number('') takes the same path as '' == 0, [ToNumber](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tonumber)!
 
 ```javascript
-Number([].valueOf().toString()) === Number(false) // true
+Number([].valueOf().toString()) === Number(false); // true
 ```
 
-### 0 == ' \t\r\n\v\f'
+### 0 == ' \\t\\r\\n\\v\\f'
 
 Strangely, although `' \t\r\n\v\f'` is not falsy, it is still loosely equal to 0. When comparing a number to a string,
 the string is converted into a number with [ToNumber](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tonumber).
 This function returns `0` if the string consists of only whitespace characters, of which this one does!
 
 ```javascript
-Number(' \t\r\n\v\f') === 0 // true
+Number(' \t\r\n\v\f') === 0; // true
 ```
 
-### ['0x1'] == 1
+### \['0x1'\] == 1
 
 Okay, this is getting ridiculous. Again, when comparing an object to a number, the object is converted to a primitive value.
 This primitive value is `'0x1'`, which is then converted to the number `1` as `0x1` is the hexadecimal representation of `1`.
 
 ```javascript
-Number(['0x1'].valueOf().toString()) === 1 // true
+Number(['0x1'].valueOf().toString()) === 1; // true
 ```
 
 ### false == '0b0'
@@ -60,7 +60,7 @@ Similarly, when comparing a boolean to a string, the string is converted to a nu
 which is converted to the number `0` as `0b0` is the binary representation of `0`.
 
 ```javascript
-false === Number('0b0') // true
+false === Number('0b0'); // true
 ```
 
 Let's re-cap all of the rules:
@@ -68,10 +68,10 @@ Let's re-cap all of the rules:
 Before all of this, if the types are the same, the values are compared directly using the (actually decent) strict equality operator, `===`.
 
 1. When comparing a number (or bigint) and a string, convert the string to a number (or bigint) and compare again.
-2. When comparing with a boolean, convert the other value to a number and compare again.
-3. When comparing with an object, convert the object to a primitive value and compare again.
-    - If the object implements `Symbol.toPrimitive` (such as `Date`), it is called with the hint `'default'` (the behaviour of which depends on anything you can dream of).
-    - For everything else, `valueOf().toString()` is called.
+1. When comparing with a boolean, convert the other value to a number and compare again.
+1. When comparing with an object, convert the object to a primitive value and compare again.
+   - If the object implements `Symbol.toPrimitive` (such as `Date`), it is called with the hint `'default'` (the behaviour of which depends on anything you can dream of).
+   - For everything else, `valueOf().toString()` is called.
 
 ## Why you should never use loose equality
 
@@ -84,6 +84,6 @@ There are a few cases where loose equality is useful, such as when you're compar
 There are only two cases where two values are loosely equal:
 
 ```javascript
-null == undefined // true
-undefined == null // true
+null == undefined; // true
+undefined == null; // true
 ```
