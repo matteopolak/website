@@ -22,22 +22,19 @@
 	</p>
 
 	<div class="flex flex-row flex-wrap gap-2 lg:gap-4">
-		<a href="https://github.com/matteopolak" class="btn-github btn btn-sm md:btn-md lg:btn-lg">
+		<a href="https://github.com/matteopolak" class="btn-github btn btn-sm md:btn-md">
 			<GitHub /> GitHub
 		</a>
-		<a
-			href="https://linkedin.com/in/matteo-polak"
-			class="btn-linkedin btn btn-sm md:btn-md lg:btn-lg"
-		>
+		<a href="https://linkedin.com/in/matteo-polak" class="btn-linkedin btn btn-sm md:btn-md">
 			<LinkedIn /> LinkedIn
 		</a>
-		<a href="/blog" class="btn btn-accent btn-sm md:btn-md lg:btn-lg">
+		<a href="/blog" class="btn btn-accent btn-sm md:btn-md">
 			<Blog /> Blog
 		</a>
 	</div>
 </section>
 
-<style lang="postcss">
+<style>
 	@keyframes rotate {
 		0% {
 			transform: rotate(0deg);
