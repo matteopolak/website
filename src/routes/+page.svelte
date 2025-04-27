@@ -12,7 +12,7 @@
 </script>
 
 <nav
-	class="sticky right-0 top-1/2 z-20 float-right mr-4 hidden max-w-sm -translate-y-1/2 transform text-right md:block lg:mr-8"
+	class="sticky top-1/2 right-0 z-20 float-right mr-4 hidden max-w-sm -translate-y-1/2 transform text-right md:block lg:mr-8"
 >
 	<div class="flex flex-col gap-2 text-xs">
 		{#each projects as project, i}
@@ -30,6 +30,8 @@
 </nav>
 
 <IntroAnimation />
+
+<div class="h-16"></div>
 
 <Scroller top={0.2} bottom={0.8} bind:index bind:offset bind:progress>
 	<div slot="foreground" id="projects" class="flex flex-col gap-32 lg:w-[calc(100vw-12rem-1rem)]">

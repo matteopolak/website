@@ -7,17 +7,17 @@
 <section
 	class="flex h-screen max-w-6xl flex-col justify-center gap-5 p-8 text-xl md:gap-8 md:p-12 md:text-3xl lg:gap-10 lg:p-16 lg:text-4xl xl:text-5xl"
 >
-	<div class="absolute left-0 right-0 top-0 -z-10 grid h-full place-items-center">
-		<div class="blob bottom-48 h-48 w-48 bg-primary"></div>
-		<div class="blob animation-delay-2000 left-16 top-8 h-48 w-48 bg-secondary"></div>
-		<div class="blob animation-delay-4000 top-32 h-32 w-32 bg-accent"></div>
-		<div class="blob animation-delay-4000 right-72 h-64 w-64 bg-success"></div>
+	<div class="absolute top-0 right-0 left-0 -z-10 grid h-full place-items-center">
+		<div class="blob bg-primary bottom-48 h-48 w-48"></div>
+		<div class="blob animation-delay-2000 bg-secondary top-8 left-16 h-48 w-48"></div>
+		<div class="blob animation-delay-4000 bg-accent top-32 h-32 w-32"></div>
+		<div class="blob animation-delay-4000 bg-success right-72 h-64 w-64"></div>
 	</div>
 
 	<h1 class="text-4xl font-bold md:text-6xl lg:text-7xl">Hi, I'm Matthew Polak</h1>
 
 	<p>
-		I'm a third-year <span class="font-semibold text-info"> Computer Science student </span> at the University
+		I'm a third-year <span class="text-info font-semibold"> Computer Science student </span> at the University
 		of Ottawa.
 	</p>
 
@@ -35,6 +35,8 @@
 </section>
 
 <style>
+	@reference "../../app.css";
+
 	@keyframes rotate {
 		0% {
 			transform: rotate(0deg);
@@ -45,7 +47,7 @@
 	}
 
 	.blob {
-		@apply absolute animate-blob rounded-full opacity-40 mix-blend-multiply blur-3xl filter;
+		@apply animate-blob absolute rounded-full opacity-40 mix-blend-multiply blur-3xl filter;
 	}
 
 	.animation-delay-2000 {

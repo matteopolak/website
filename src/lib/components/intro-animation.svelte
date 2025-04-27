@@ -14,7 +14,7 @@
 	<svg
 		viewBox="-350 -350 800 800"
 		xmlns="http://www.w3.org/2000/svg"
-		class="absolute left-0 top-0 -z-10 h-full w-full"
+		class="absolute top-0 left-0 -z-10 h-full w-full"
 	>
 		<circle cx="50" cy="35" r="80" class="fill-base-200">
 			<animate
@@ -51,22 +51,22 @@
 		</div>
 	{/if}
 
-	<div class="absolute bottom-8 left-0 right-0 grid place-items-center">
+	<div class="absolute right-0 bottom-8 left-0 grid place-items-center">
 		<a
 			class="relative transition-all duration-300 hover:translate-y-1"
 			href="#projects"
 			aria-label="Scroll to projects"
 		>
-			<svg class="h-10 w-10 fill-base-content" viewBox="0 0 24 24">
+			<svg class="fill-base-content h-10 w-10" viewBox="0 0 24 24">
 				<path d="M18 6.41 16.59 5 12 9.58 7.41 5 6 6.41l6 6z" />
 				<path d="m18 13-1.41-1.41L12 16.17l-4.59-4.58L6 13l6 6z" />
 			</svg>
 		</a>
 
 		{#if ready}
-			<div class="absolute hidden h-16 w-16 -translate-y-16 fill-primary md:block">
+			<div class="fill-primary absolute hidden h-16 w-16 -translate-y-16 md:block">
 				<span
-					class="absolute w-64 -translate-y-4 translate-x-20 font-into-light text-xl text-primary"
+					class="font-into-light text-primary absolute w-64 translate-x-20 -translate-y-4 text-xl"
 					transition:fly={{
 						delay: 1_500,
 						duration: 1_000,
@@ -94,7 +94,7 @@
 	</div>
 </div>
 
-<style lang="postcss">
+<style>
 	.animate-write-fade {
 		animation:
 			write-fill 1.2s linear forwards,
@@ -110,12 +110,12 @@
 		}
 
 		60% {
-			@apply fill-base-200;
+			fill: var(--color-base-200);
 			stroke-dashoffset: 0;
 		}
 
 		100% {
-			@apply fill-base-content;
+			fill: var(--color-base-content);
 			stroke-dashoffset: 0;
 		}
 	}
@@ -123,12 +123,12 @@
 	@keyframes shift-fade {
 		0% {
 			transform: translateX(0);
-			@apply opacity-100;
+			opacity: 1;
 		}
 
 		100% {
 			transform: translateX(-8%);
-			@apply opacity-0;
+			opacity: 0;
 		}
 	}
 </style>

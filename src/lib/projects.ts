@@ -11,6 +11,16 @@ export type Project = {
 
 export const projects = [
 	{
+		title: 'Compiled Programming Language',
+		id: 'owl',
+		thumbnail: '/images/projects/owl.webp',
+		date: 'February 2025',
+		description:
+			'Owl is a compiled programming language that focuses on performance and simplicity. It is designed to be easy to use with a high-level syntax and support for easy integration with C and C++ libraries. It is built on top of LLVM, which allows for high-performance code generation and optimization.',
+		repository: 'https://github.com/matteopolak/owl',
+		tags: ['C++', 'LLVM', 'Programming Language', 'Compiler']
+	},
+	{
 		title: 'Game Engine',
 		id: 'ira',
 		thumbnail: '/images/projects/ira.webp',
