@@ -1,19 +1,13 @@
 <script lang="ts">
+	import { ArrowRight } from '@lucide/svelte';
+	import GitHub from './icons/github.svelte';
 	import Tag from './Tag.svelte';
-
-	export type Project = {
-		image: string;
-		title: string;
-		description: string;
-		tags: string[];
-		github?: string;
-		website?: string;
-	};
+	import type { Project } from '$lib/types';
 
 	let { project }: { project: Project } = $props();
 </script>
 
-<section class="card bg-base-10 card-border border-base-300 card-sm">
+<section class="card card-sm">
 	<main class="card-body gap-4 min-h-64">
 		<h2 class="card-title">{project.title}</h2>
 
@@ -23,6 +17,10 @@
 			{/each}
 		</div>
 
-		<a class="btn" href="/asd">github</a>
+		<a class="btn" href="/asd">
+			<GitHub class="w-4 h-4" />
+			See it on GitHub
+			<ArrowRight class="w-4 h-4 ml-2" />
+		</a>
 	</main>
 </section>
